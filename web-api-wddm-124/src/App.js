@@ -3,39 +3,75 @@ import axios from "axios";
 import index from './index.css';
 
 function App() {
-  // const url = `https://api.openweathermap.org/data/2.5/weather?q=toronto&appid=df8fcec4a7e7f8518aac0b288b52501a`
+
+  const [data, setData] = useState({});
+  const [location, setLocation] = useState('');
+
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=df8fcec4a7e7f8518aac0b288b52501a`
+
+  const searchLocation = (event) =>{
+    if (event.key==='Enter') {   
+      axios.get(url).then((response) =>{
+        setData(response.data)
+        console.log(response.data)
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+    });
+    }
+  }
+
+
   return (
     <div className="app">
+      <div className="search">
+      <input 
+      type="text"
+      value={location}
+      onChange={event => setLocation(event.target.value)}
+      onKeyPress={searchLocation}
+      placeholder="Enter Location"
+      />
+    </div>
+    
+
       <div className="container">
         <div className="top">
 
           <div className="location">
-            <p>Toronto</p>
+            <p>{data.name}</p>
           </div>
           
           <div className="temp">
-            <h2>2°C</h2>
+            {data.main ? <h1>{data.main.temp.toFixed()} °C</h1> : null}
+            {/* It is accessing first to the child of main (temp). Hence
+            the value, is undefined, to fix it ... I add a conditional*/}
+           
           </div>
 
           <div className="description">
-            <p>Clouds</p>
+            {data.weather ? <p>{data.weather[0].main}</p>: null}
           </div>
         </div>
 
+
+        {/* If the search bar is not undefined, render the content */}
+        {data.name != undefined &&
         <div className="bottom">
             <div className="feels">
-              <p className="bold">-1°C</p>
+              {data.main ? <p className="bold">{data.main.feels_like.toFixed()} °C</p>:null}
               <p>Feels Like</p>
             </div>
             <div className="humitidy">
-              <p className="bold">2%</p>
+            {data.main ? <p className="bold">{data.main.humidity} %</p>:null}
               <p>Humitidy</p>
             </div>
             <div className="wind">
-            <p className="bold">12MPH</p>
+            {data.wind ? <p className="bold">{data.wind.speed} MPH</p>:null}
             <p>Wind Speed</p>
             </div>
         </div>
+        } 
 
       </div>
     </div>
