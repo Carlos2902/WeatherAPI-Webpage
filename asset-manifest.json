@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/Web-API_WDDM-124-RNA/static/css/main.b2e5a991.css",
+    "main.js": "/Web-API_WDDM-124-RNA/static/js/main.74949a3b.js",
+    "static/media/background_weather.jpeg": "/Web-API_WDDM-124-RNA/static/media/background_weather.f75f29518cc6ffa09cea.jpeg",
+    "index.html": "/Web-API_WDDM-124-RNA/index.html",
+    "main.b2e5a991.css.map": "/Web-API_WDDM-124-RNA/static/css/main.b2e5a991.css.map",
+    "main.74949a3b.js.map": "/Web-API_WDDM-124-RNA/static/js/main.74949a3b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b2e5a991.css",
+    "static/js/main.74949a3b.js"
+  ]
+}
