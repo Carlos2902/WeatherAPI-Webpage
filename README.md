@@ -1,6 +1,5 @@
 # WeatherAPI Webpage
-
-Welcome to the WeatherAPI Webpage project! This project is a simple web application built with React that allows users to check the weather of any city in the world using the OpenWeatherMap API.
+This project is a simple web application built with React that allows users to check the weather of any city in the world using the OpenWeatherMap API.
 
 ## Project Overview
 
