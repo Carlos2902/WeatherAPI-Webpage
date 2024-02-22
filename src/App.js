@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import axios from "axios";
+import { FaSearch } from "react-icons/fa";
 import index from './index.css';
 
 function App() {
@@ -9,27 +10,36 @@ function App() {
 
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=df8fcec4a7e7f8518aac0b288b52501a`
 
-  const searchLocation = (event) =>{
-    if (event.key==='Enter') {   
-      axios.get(url).then((response) =>{
-        setData(response.data)
-        console.log(response.data)
-    })
-    .catch((error) => {
-      console.error('Error:', error);
-    });
+  const searchLocation = () => {
+    axios
+      .get(url)
+      .then((response) => {
+        setData(response.data);
+        console.log(response.data);
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+  };
+
+  const handleKeyPress = (event) => {
+    if (event.key === "Enter") {
+      searchLocation();
     }
-  }
+  };
+
 
 
   return (
     <div className="app">
       <div className="search">
+      <FaSearch className="search-icon" onClick={searchLocation} />
+
       <input 
       type="text"
       value={location}
       onChange={event => setLocation(event.target.value)}
-      onKeyPress={searchLocation}
+      onKeyPress={handleKeyPress}
       placeholder="Enter Location"
       />
     </div>

@@ -43,18 +43,29 @@ h1{
 
 /* Search bar */
 
-.app .search{
+.app .search {
   text-align: center;
   padding: 1rem;
 }
 
+
 .app input{
-  padding: .7rem 1.5rem;
+  padding: .7rem 3rem;
   font-size: 1.2rem;
   border-radius: 25px;
   border: 1px solid rgba(255, 255, 255, 0.8);
   background: rgba(255, 255, 255, 0.1);
   color: #FFF;
+  z-index: 1;
+}
+
+.app .search-icon{
+  position: absolute;
+  top: 5%;
+  content: icon;
+  margin-left: 250px;
+  transform: translateY(-50%);
+  cursor: pointer
 }
 
 ::placeholder{
