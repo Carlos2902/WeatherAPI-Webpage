@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/Web-API_WDDM-124-RNA/static/css/main.b2e5a991.css",
-    "main.js": "/Web-API_WDDM-124-RNA/static/js/main.74949a3b.js",
-    "static/media/background_weather.jpeg": "/Web-API_WDDM-124-RNA/static/media/background_weather.f75f29518cc6ffa09cea.jpeg",
-    "index.html": "/Web-API_WDDM-124-RNA/index.html",
-    "main.b2e5a991.css.map": "/Web-API_WDDM-124-RNA/static/css/main.b2e5a991.css.map",
-    "main.74949a3b.js.map": "/Web-API_WDDM-124-RNA/static/js/main.74949a3b.js.map"
+    "main.css": "/Carlos2902/WeatherAPI-Webpage/static/css/main.244e58da.css",
+    "main.js": "/Carlos2902/WeatherAPI-Webpage/static/js/main.5e261b09.js",
+    "static/media/background_weather.jpeg": "/Carlos2902/WeatherAPI-Webpage/static/media/background_weather.f75f29518cc6ffa09cea.jpeg",
+    "index.html": "/Carlos2902/WeatherAPI-Webpage/index.html",
+    "main.244e58da.css.map": "/Carlos2902/WeatherAPI-Webpage/static/css/main.244e58da.css.map",
+    "main.5e261b09.js.map": "/Carlos2902/WeatherAPI-Webpage/static/js/main.5e261b09.js.map"
   },
   "entrypoints": [
-    "static/css/main.b2e5a991.css",
-    "static/js/main.74949a3b.js"
+    "static/css/main.244e58da.css",
+    "static/js/main.5e261b09.js"
   ]
 }
